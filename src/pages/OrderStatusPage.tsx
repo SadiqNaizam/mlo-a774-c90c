@@ -32,7 +32,7 @@ const OrderStatusPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-muted/20">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -48,10 +48,10 @@ const OrderStatusPage = () => {
                     </section>
                     
                     {currentStatus === 'Delivered' && (
-                        <Alert variant="default" className="bg-green-50 border-green-200 text-green-800">
-                            <CheckCircle className="h-4 w-4 text-green-600" />
+                        <Alert variant="default" className="bg-secondary/10 border-secondary/20 text-secondary">
+                            <CheckCircle className="h-4 w-4 text-secondary" />
                             <AlertTitle>Delivered!</AlertTitle>
-                            <AlertDescription>
+                            <AlertDescription className="text-secondary/90">
                                 Your order has been successfully delivered. Enjoy your meal!
                             </AlertDescription>
                         </Alert>
