@@ -48,10 +48,10 @@ const OrderStatusPage = () => {
                     </section>
                     
                     {currentStatus === 'Delivered' && (
-                        <Alert variant="default" className="bg-secondary/10 border-secondary/20 text-secondary">
-                            <CheckCircle className="h-4 w-4 text-secondary" />
+                        <Alert variant="default" className="bg-green-50 border-green-200 text-green-800">
+                            <CheckCircle className="h-4 w-4 text-green-600" />
                             <AlertTitle>Delivered!</AlertTitle>
-                            <AlertDescription className="text-secondary/90">
+                            <AlertDescription>
                                 Your order has been successfully delivered. Enjoy your meal!
                             </AlertDescription>
                         </Alert>
