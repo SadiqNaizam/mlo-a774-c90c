@@ -23,7 +23,7 @@ const LiveMapView: React.FC = () => {
           <svg width="100%" height="100%" viewBox="0 0 300 250" className="absolute inset-0">
             <path
               d={path}
-              stroke="#e2e8f0"
+              className="stroke-border"
               strokeWidth="3"
               fill="none"
               strokeDasharray="8 4"
@@ -32,19 +32,19 @@ const LiveMapView: React.FC = () => {
 
           {/* Restaurant Icon */}
           <div 
-            className="absolute flex flex-col items-center text-gray-600"
+            className="absolute flex flex-col items-center text-muted-foreground"
             style={restaurantPosition}
           >
-            <Building2 className="h-8 w-8 text-slate-700" />
+            <Building2 className="h-8 w-8 text-foreground" />
             <span className="text-xs font-semibold">Restaurant</span>
           </div>
 
           {/* Home Icon */}
           <div 
-            className="absolute flex flex-col items-center text-gray-600"
+            className="absolute flex flex-col items-center text-muted-foreground"
             style={homePosition}
           >
-            <Home className="h-8 w-8 text-blue-600" />
+            <Home className="h-8 w-8 text-primary" />
             <span className="text-xs font-semibold">Your Home</span>
           </div>
 
