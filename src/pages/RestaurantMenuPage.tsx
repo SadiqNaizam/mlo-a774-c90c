@@ -122,7 +122,7 @@ const RestaurantMenuPage = () => {
                         ))}
                       </div>
                     </section>
-                  ))}
+                  ))}\
                 </CardContent>
               </Card>
             </div>
