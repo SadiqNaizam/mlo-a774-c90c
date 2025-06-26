@@ -23,10 +23,10 @@ const LiveMapView: React.FC = () => {
           <svg width="100%" height="100%" viewBox="0 0 300 250" className="absolute inset-0">
             <path
               d={path}
-              className="stroke-border"
               strokeWidth="3"
               fill="none"
               strokeDasharray="8 4"
+              className="stroke-border"
             />
           </svg>
 
