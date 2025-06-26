@@ -53,10 +53,10 @@ const OrderTracker: React.FC<OrderTrackerProps> = ({ currentStatus }) => {
             return (
               <React.Fragment key={step.name}>
                 {/* Step Item */}
-                <div className="flex flex-col items-center gap-2 text-center">
+                <div className="flex flex-col items-center gap-2 text-center w-20">
                   <div
                     className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-full border-2",
+                      "flex h-12 w-12 items-center justify-center rounded-full border-2 transition-colors",
                       isCompleted ? "bg-secondary border-secondary/80 text-secondary-foreground" : "",
                       isActive ? "bg-primary border-primary/80 text-primary-foreground animate-pulse" : "",
                       !isCompleted && !isActive ? "bg-muted border-border text-muted-foreground" : ""
@@ -77,7 +77,7 @@ const OrderTracker: React.FC<OrderTrackerProps> = ({ currentStatus }) => {
                 {/* Connecting Line (not after the last step) */}
                 {index < steps.length - 1 && (
                   <div className={cn(
-                      "flex-1 h-1 mx-2",
+                      "flex-1 h-1 mx-2 rounded-full transition-colors",
                       isCompleted ? "bg-secondary" : "bg-muted"
                   )}/>
                 )}
