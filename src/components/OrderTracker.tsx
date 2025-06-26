@@ -57,9 +57,9 @@ const OrderTracker: React.FC<OrderTrackerProps> = ({ currentStatus }) => {
                   <div
                     className={cn(
                       "flex h-12 w-12 items-center justify-center rounded-full border-2",
-                      isCompleted ? "bg-green-500 border-green-600 text-white" : "",
-                      isActive ? "bg-blue-500 border-blue-600 text-white animate-pulse" : "",
-                      !isCompleted && !isActive ? "bg-gray-100 border-gray-300 text-gray-400" : ""
+                      isCompleted ? "bg-secondary border-secondary/80 text-secondary-foreground" : "",
+                      isActive ? "bg-primary border-primary/80 text-primary-foreground animate-pulse" : "",
+                      !isCompleted && !isActive ? "bg-muted border-border text-muted-foreground" : ""
                     )}
                   >
                     <step.icon className="h-6 w-6" />
@@ -67,7 +67,7 @@ const OrderTracker: React.FC<OrderTrackerProps> = ({ currentStatus }) => {
                   <p
                     className={cn(
                       "text-xs sm:text-sm font-medium",
-                      isCompleted || isActive ? "text-gray-800" : "text-gray-500"
+                      isCompleted || isActive ? "text-foreground" : "text-muted-foreground"
                     )}
                   >
                     {step.name}
@@ -78,7 +78,7 @@ const OrderTracker: React.FC<OrderTrackerProps> = ({ currentStatus }) => {
                 {index < steps.length - 1 && (
                   <div className={cn(
                       "flex-1 h-1 mx-2",
-                      isCompleted ? "bg-green-500" : "bg-gray-200"
+                      isCompleted ? "bg-secondary" : "bg-muted"
                   )}/>
                 )}
               </React.Fragment>
