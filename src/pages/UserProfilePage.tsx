@@ -101,7 +101,7 @@ const UserProfilePage = () => {
                             <span className="font-medium">{order.id} - {order.restaurant}</span>
                             <span className="text-muted-foreground">{order.date}</span>
                             <span>{order.total}</span>
-                            <Badge variant={order.status === 'Delivered' ? 'secondary' : 'outline'}>{order.status}</Badge>
+                            <Badge variant={order.status === 'Delivered' ? 'default' : 'secondary'}>{order.status}</Badge>
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="bg-muted/30 p-4 rounded-md">
@@ -139,14 +139,14 @@ const UserProfilePage = () => {
                     <Card key={addr.id} className="flex flex-col">
                       <CardHeader className="flex flex-row items-center justify-between pb-2">
                           <CardTitle className="text-lg font-medium">{addr.type}</CardTitle>
-                          {addr.isDefault && <Badge variant="secondary">Default</Badge>}\
+                          {addr.isDefault && <Badge variant="secondary">Default</Badge>}
                       </CardHeader>
                       <CardContent className="flex-grow">
                         <p className="text-muted-foreground">{addr.address}</p>
                       </CardContent>
                       <CardFooter className="flex gap-2">
                         <Button variant="outline" size="sm"><Pencil className="mr-2 h-3 w-3" />Edit</Button>
-                        <Button variant="outline" size="sm" className="text-destructive border-destructive/50 hover:bg-destructive/10 hover:text-destructive"><Trash2 className="mr-2 h-3 w-3" />Delete</Button>
+                        <Button variant="outline" size="sm" className="text-red-500 hover:text-red-500 hover:bg-red-50 border-red-200 hover:border-red-500/50"><Trash2 className="mr-2 h-3 w-3" />Delete</Button>
                       </CardFooter>
                     </Card>
                   ))}\
@@ -170,7 +170,7 @@ const UserProfilePage = () => {
                       <CardHeader className="pb-2">
                          <div className="flex items-center justify-between">
                             <CardTitle className="text-lg font-medium">{pm.type}</CardTitle>
-                            {pm.isDefault && <Badge variant="secondary">Default</Badge>}\
+                            {pm.isDefault && <Badge variant="secondary">Default</Badge>}
                          </div>
                          <p className="text-muted-foreground text-sm pt-2">Ending in **** {pm.last4}</p>
                       </CardHeader>
@@ -179,7 +179,7 @@ const UserProfilePage = () => {
                       </CardContent>
                       <CardFooter className="flex gap-2">
                         <Button variant="outline" size="sm"><Pencil className="mr-2 h-3 w-3" />Edit</Button>
-                        <Button variant="outline" size="sm" className="text-destructive border-destructive/50 hover:bg-destructive/10 hover:text-destructive"><Trash2 className="mr-2 h-3 w-3" />Delete</Button>
+                        <Button variant="outline" size="sm" className="text-red-500 hover:text-red-500 hover:bg-red-50 border-red-200 hover:border-red-500/50"><Trash2 className="mr-2 h-3 w-3" />Delete</Button>
                       </CardFooter>
                     </Card>
                   ))}\
