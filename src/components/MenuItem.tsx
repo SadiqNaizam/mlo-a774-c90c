@@ -35,9 +35,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ id, name, description, price }) => 
   return (
     <div className="flex items-center justify-between py-4 border-b last:border-b-0">
       <div className="flex-1 pr-4">
-        <h3 className="text-md font-semibold text-gray-800">{name}</h3>
-        <p className="text-sm text-gray-500 mt-1 line-clamp-2">{description}</p>
-        <p className="text-md font-bold text-gray-900 mt-2">${price.toFixed(2)}</p>
+        <h3 className="text-md font-semibold text-foreground">{name}</h3>
+        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{description}</p>
+        <p className="text-md font-bold text-foreground mt-2">${price.toFixed(2)}</p>
       </div>
       <div className="flex items-center justify-end w-32">
         {quantity === 0 ? (
