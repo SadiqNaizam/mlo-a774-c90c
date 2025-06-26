@@ -59,7 +59,7 @@ const RestaurantMenuPage = () => {
   const totalItemsInCart = 3; // Placeholder
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-muted/20">
       <Header />
 
       <main className="flex-1">
